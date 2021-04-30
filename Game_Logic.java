@@ -7,7 +7,7 @@ public class Game_Logic {
 
     public void waitforCommand(){
 
-        if (GameObjects.pc.inRoom == 0){
+        if (Game_Objects.pc.inRoom == 0){
             createCharacter();
         }
         System.out.println("What to do?");
