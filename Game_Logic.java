@@ -27,7 +27,7 @@ public class Game_Logic {
     }
 
     public void createCharacter(){
-        System.out.println("Welcome to the gaem. What is your naem?");
+        System.out.println("Welcome to the game. What is your name?");
         Scanner sc = new Scanner(System.in);
 
         Game_Objects.pc.name = sc.next();
