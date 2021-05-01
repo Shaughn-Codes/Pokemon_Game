@@ -24,10 +24,10 @@ public class Trainer {
 
         if (Trainer == "Ash" || Trainer == "ash"){
             System.out.println("You choose Ash as your Trainer!, he is equipped with the pokemon Pikachu" +
-                    "and has an experiance of of Expert!");
+                    "and has an experience of of Expert!");
         } else if (Trainer == "Whitney" || Trainer == "whitney"){
             System.out.println("You choose Whitney as your Trainer!, she is equipped with the pokemon Miltank"+
-                    "and has an experance of Intermediate!");
+                    "and has an experience of Intermediate!");
         } else if (Trainer == "Brock" || Trainer == "brock"){
             System.out.println("You choose Brock as your Trainer!, he is equipped with the Pokemon Onix" +
                     "and he has a experience of Mid!");
