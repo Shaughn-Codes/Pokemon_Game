@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Trainer {
     String name,pokemon,experience;
 
-    Trainer(String name, String Pokemon, String Experience){
+    public Trainer(String name, String Pokemon, String Experience){
         this.name = name;
         this.pokemon = Pokemon;
         this.experience = Experience;
@@ -17,25 +17,36 @@ public class Trainer {
 
     public String getExperience(){return experience;}
 
-    public void displayTrainer(String Trainer){
+    public void displayTrainer(String Trainer) throws Exception{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose a Trainer: Ash, Whitney, Brock");
         Trainer = scanner.nextLine();
 
         if (Trainer == "Ash" || Trainer == "ash"){
-            System.out.println("You choose Ash as your Trainer!, he is equipped with the pokemon Pikachu" +
-                    "and has an experience of of Expert!");
+            Trainer Ash = new Trainer("Ash","Pikachu","Expert");
+
+            System.out.println("You choose " + Ash.getName() + " as your Trainer!, he is equipped with the pokemon " + Ash.getPokemon() +
+                    " and has an experience of " + Ash.getExperience()+ "!");
         } else if (Trainer == "Whitney" || Trainer == "whitney"){
-            System.out.println("You choose Whitney as your Trainer!, she is equipped with the pokemon Miltank"+
-                    "and has an experience of Intermediate!");
+            Trainer Whitney = new Trainer("Whitey","Miltank","Intermediate");
+
+            System.out.println("You choose " + Whitney.getName() +  " as your Trainer!, she is equipped with the pokemon "+ Whitney.getPokemon() +
+                    " and has an experience of " + Whitney.getExperience() + "!");
         } else if (Trainer == "Brock" || Trainer == "brock"){
-            System.out.println("You choose Brock as your Trainer!, he is equipped with the Pokemon Onix" +
-                    "and he has a experience of Mid!");
+            Trainer Brock = new Trainer("Brock","Onix","Mid");
+
+            System.out.println("You choose " + Brock.getName() + " as your Trainer!, he is equipped with the Pokemon " + Brock.getName() +
+                    " and he has a experience of " + Brock.getExperience() + "!");
+        } else {
+            throw new Exception("Please type in the given options!");
         }
 
     }
 
-//    Trainer Ash = new Trainer("Ash","Pikachu","Expert");
-//    Trainer Whitney = new Trainer("Whitey","Miltank","Intermediate");
-//    Trainer Brock = new Trainer("Brock","Onix","Mid");
+
+
+
+
+
+
 }
