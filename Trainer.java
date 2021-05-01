@@ -2,9 +2,6 @@ package Pokemon_Game;
 import java.util.Scanner;
 
 public class Trainer {
-    public static void main(String[] args) {
-
-    }
 
     String name,pokemon,experience;
 
