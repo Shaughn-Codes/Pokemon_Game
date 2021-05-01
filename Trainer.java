@@ -2,6 +2,10 @@ package Pokemon_Game;
 import java.util.Scanner;
 
 public class Trainer {
+    public static void main(String[] args) {
+
+    }
+
     String name,pokemon,experience;
 
     public Trainer(String name, String Pokemon, String Experience){
@@ -17,10 +21,10 @@ public class Trainer {
 
     public String getExperience(){return experience;}
 
-    public void displayTrainer(String Trainer) throws Exception{
+    public static void displayTrainer() throws Exception{
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose a Trainer: Ash, Whitney, Brock");
-        Trainer = scanner.nextLine();
+        String Trainer = scanner.nextLine();
 
         if (Trainer == "Ash" || Trainer == "ash"){
             Trainer Ash = new Trainer("Ash","Pikachu","Expert");
@@ -42,8 +46,6 @@ public class Trainer {
         }
 
     }
-
-
 
 
 
