@@ -34,7 +34,7 @@ public class Trainer {
             System.out.println("You choose " + Whitney.getName() +  " as your Trainer!, she is equipped with the pokemon "+ Whitney.getPokemon() +
                     " and has an experience of " + Whitney.getExperience() + "!");
         } else if (Trainer == "Brock" || Trainer == "brock"){
-            Trainer Brock = new Trainer("Brock","Onix","Mid");
+            Trainer Brock = new Trainer("Brock","Onix","Beginner");
 
             System.out.println("You choose " + Brock.getName() + " as your Trainer!, he is equipped with the Pokemon " + Brock.getName() +
                     " and he has a experience of " + Brock.getExperience() + "!");
