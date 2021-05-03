@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Room {
     int number;
-    String name = null;
+    String name;
     ArrayList<String> desc = new ArrayList<String>();
     ArrayList<String> exit = new ArrayList<String>();
 
