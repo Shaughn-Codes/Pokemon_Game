@@ -48,6 +48,9 @@ public class Trainer {
 
             System.out.println("You choose " + Brock.name + " as your Trainer!, he is equipped with the Pokemon " + Brock.pokemon +
                     " and he has a experience of " + Brock.experience + "!");
+            System.out.println("You choose " + Brock.getName() + " as your Trainer!, he is equipped with the Pokemon " + Brock.getPokemon() +
+                    " and he has a experience of " + Brock.getExperience() + "!");
+
         } else {
             throw new Exception("Please type in the given options!");
         }
