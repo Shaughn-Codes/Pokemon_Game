@@ -46,10 +46,6 @@ public class Trainer {
 
         } else if (Trainer.equals("Brock") || Trainer.equals("brock")){
             Trainer Brock = new Trainer("Brock","Onix","Mid");
-        } else if (Trainer == "Brock" || Trainer == "brock"){
-            Trainer Brock = new Trainer("Brock","Onix","Beginner");
-
-
             System.out.println("You choose " + Brock.getName() + " as your Trainer!, he is equipped with the Pokemon " + Brock.getPokemon() +
                     " and he has a experience of " + Brock.getExperience() + "!");
         } else {
