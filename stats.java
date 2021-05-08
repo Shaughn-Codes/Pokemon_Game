@@ -8,7 +8,7 @@ public class stats {
 	
 	
 	public stats() {
-		this.lvl=0;
+		this.lvl=5;
 		this.damage=0;
 		this.defense=0;
 		this.health=500;
