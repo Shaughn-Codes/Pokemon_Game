@@ -1,5 +1,3 @@
-package Pokemon_Game;
-
 public class trainer {
     String name;
     String pokemon;
