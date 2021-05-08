@@ -139,6 +139,7 @@ public class game {
 
         System.out.println("\nAnnoying teen: Hey kid, I see that you got your " 
                           + gameStuff.player.pokemon + ". Let's fight (You cannot reject this)");
+        Battle.lvlCheck();
 
     }
 

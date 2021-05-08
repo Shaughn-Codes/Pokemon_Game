@@ -1,4 +1,4 @@
-Public  Class Battle(){
+public  class Battle(){
 public static void lvlCheck(){
 if(gameStuff.player.pokemon.equalsIgnoreCase("Charmander")){
     if(gameStuff.pet.cLevel == 5){
