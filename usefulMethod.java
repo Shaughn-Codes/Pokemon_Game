@@ -1,4 +1,4 @@
-package Pokemon_Game;
+
 
 public class usefulMethod {
     public static void clearScreen() {  
