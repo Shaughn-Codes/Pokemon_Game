@@ -1,4 +1,3 @@
-package Pokemon_Game;
 
 import java.util.Scanner;
 
