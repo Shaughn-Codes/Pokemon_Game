@@ -50,7 +50,7 @@ public class game {
         String position;
 
         System.out.println("Follow me. Let get you a pokemon.");
-        usefulMethod.loading("Walking . . . . \n", 300);
+        usefulMethod.loading("Walking . . . . \n", 10);
         usefulMethod.clearScreen();
 
         System.out.println("\nHere is 3 pokemon balls. Inside every ball there is an unique pokemon.");
@@ -77,6 +77,12 @@ public class game {
                     gameStuff.player.hp = gameStuff.pet.cHP;
                     gameStuff.player.attack = gameStuff.pet.cAttack;
                     gameStuff.player.defense = gameStuff.pet.cDefense;
+                    gameStuff.jerry.pokemon = gameStuff.pet.squirtle;
+                    gameStuff.jerry.nature = gameStuff.pet.sNature;
+                    gameStuff.jerry.level = gameStuff.pet.sLevel;
+                    gameStuff.jerry.hp = gameStuff.pet.sHP;
+                    gameStuff.jerry.attack = gameStuff.pet.sAttack;
+                    gameStuff.jerry.defense = gameStuff.pet.sDefense;
                 }
                 else {
                     System.out.println();
@@ -135,7 +141,7 @@ public class game {
         Thread.sleep(2000);
         usefulMethod.clearScreen();
         System.out.println("\nAs you leave the lab");
-        usefulMethod.loading(". . . . .", 200);
+        usefulMethod.loading(". . . . .", 10);
 
         System.out.println("\nAnnoying teen: Hey kid, I see that you got your "+gameStuff.player.pokemon + ". Let's fight (You cannot reject this)");
         Battle.lvlCheck();
