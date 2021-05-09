@@ -2,7 +2,7 @@
 import java.util.Scanner;
 
 public class pokemon {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws Exception {
         
         int choice;
         Scanner scan = new Scanner(System.in);

@@ -1,18 +1,16 @@
-
 import java.util.Scanner;
-
 public class game {
     
     static String name;
     static int choice;
     static Scanner scan = new Scanner(System.in);
 
-    public static void start() throws InterruptedException {
+    public static void start() throws Exception {
             CreateChar();
     }
 
 
-    public static void CreateChar() throws InterruptedException {
+    public static void CreateChar() throws Exception {
         System.out.println("\nHello! My name is Professor Oak.");
         System.out.println("I am in charge of this lab.");
     do {
@@ -45,12 +43,12 @@ public class game {
         pickPokemon();
     }
 
-    public static void pickPokemon() throws InterruptedException {
+    public static void pickPokemon() throws Exception {
 
         String position;
 
         System.out.println("Follow me. Let get you a pokemon.");
-        usefulMethod.loading("Walking . . . . \n", 10);
+        usefulMethod.loading("Walking . . . . \n", 100);
         usefulMethod.clearScreen();
 
         System.out.println("\nHere is 3 pokemon balls. Inside every ball there is an unique pokemon.");
@@ -137,7 +135,7 @@ public class game {
         firstBattle();
     }
 
-    public static void firstBattle() throws InterruptedException {
+    public static void firstBattle() throws Exception {
         Thread.sleep(2000);
         usefulMethod.clearScreen();
         System.out.println("\nAs you leave the lab");

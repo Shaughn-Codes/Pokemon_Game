@@ -4,6 +4,7 @@ public class stats {
 	int damage;
 	int defense;
 	int health;
+	int playerHealth;
 	double exp;
 	
 	
@@ -12,6 +13,7 @@ public class stats {
 		this.damage=0;
 		this.defense=0;
 		this.health=500;
+		this.playerHealth = 500;
 		this.exp=0.0;
 	}
 	public void lvlUp(double exp) {
@@ -78,6 +80,10 @@ public class stats {
 	public void damageMinus() {
 		this.damage=this.damage-10;
 	}
+
+	public int healthMinus(){return this.health=this.health-this.damage;}
+
+	public int playerHealthMinus(){return this.playerHealth=this.playerHealth-this.damage;}
 	
 	public int getLevel() {
 		return this.lvl;
@@ -90,4 +96,6 @@ public class stats {
 	public int getHealth() {
 		return this.health;
 	}
+
+	public int getPlayerHealth(){return this.playerHealth;}
 }

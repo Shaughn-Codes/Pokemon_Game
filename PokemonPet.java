@@ -1,5 +1,3 @@
-
-
 public class PokemonPet {
 
         String charmander = "Charmander";
