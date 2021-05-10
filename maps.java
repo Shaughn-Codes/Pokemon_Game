@@ -1,7 +1,14 @@
 import java.util.Scanner;
-
+//Members: Qi Da Chen, Shaughn Bulgar, Simeon Karakatsiotis, Wai Pong.
 public class maps {
+    /*
+    This class is used for the map system as there is one in the original
+    Pokemon games so that you can bump into other trainers and duel.
+    We use a linked list for the map system.
+     */
+
     class Node {
+        //this is a Node class where it has a previous Node and a next Node
         int nodeData;
         Node next;
         Node perv;
@@ -21,6 +28,7 @@ public class maps {
     static Scanner scan = new Scanner(System.in);
 
     public void add(int nodeData) {
+        // this method is where it'll append nodes to the map system
         Node createNode = new Node(nodeData);
 
         if(head == null) {
@@ -37,6 +45,7 @@ public class maps {
     }
 
     public static void addingMaps() {
+        // this method is adding different routes where you can encounter a trainer to duel.
         maps mapList = new maps();
 
         mapList.add(1); // Town
@@ -50,6 +59,10 @@ public class maps {
     public static void preAdventure() throws InterruptedException {
         town();
     }
+    /*
+    Town method prints out that you have entered the town and
+    takes an input of where the player would like to go.
+     */
     public static void town() throws InterruptedException {
         usefulMethod.clearScreen();
         current = head;
@@ -74,6 +87,13 @@ public class maps {
             }
         }
     }
+
+    /*
+    you have encountered route 1 and it takes a random integer 1-100
+    and if the output is less than 50 it'll display that there is nothing in this area
+    in which it'll proceed to tell you to pick another location.
+    If the output is greater than or equal to 50 itll throw you into your first battle.
+     */
 
     public static void routeOne() throws InterruptedException {
         usefulMethod.clearScreen();
@@ -117,6 +137,12 @@ public class maps {
             }
         }
     }
+    /*
+    you have encountered route 2 and it takes a random integer 1-100
+    and if the output is less than 50 it'll display that there is nothing in this area
+    in which it'll proceed to tell you to pick another location.
+    If the output is greater than or equal to 50 itll throw you into your first battle.
+     */
 
     public static void routeTwo() throws InterruptedException {
         usefulMethod.clearScreen();
@@ -154,6 +180,13 @@ public class maps {
             }
         }
     }
+
+    /*
+    you have encountered route 3 and it takes a random integer 1-100
+    and if the output is less than 50 it'll display that there is nothing in this area
+    in which it'll proceed to tell you to pick another location.
+    If the output is greater than or equal to 50 itll throw you into your first battle.
+     */
 
     public static void routeThree() throws InterruptedException {
         usefulMethod.clearScreen();
@@ -204,6 +237,13 @@ public class maps {
         }
     }
 
+    /*
+    you have encountered route 4 and it takes a random integer 1-100
+    and if the output is less than 50 it'll display that there is nothing in this area
+    in which it'll proceed to tell you to pick another location.
+    If the output is greater than or equal to 50 itll throw you into your first battle.
+     */
+
     public static void routeFour() throws InterruptedException {
         usefulMethod.clearScreen();
         System.out.println("You are at Route 4");
@@ -240,6 +280,13 @@ public class maps {
             }
         }
     }
+
+    /*
+    you have encountered route 5 and it takes a random integer 1-100
+    and if the output is less than 50 it'll display that there is nothing in this area
+    in which it'll proceed to tell you to pick another location.
+    If the output is greater than or equal to 50 itll throw you into your first battle.
+     */
 
     public static void routeFive() throws InterruptedException {
         usefulMethod.clearScreen();
