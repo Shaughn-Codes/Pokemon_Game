@@ -1,17 +1,18 @@
 import java.util.Scanner;
+
 public class game {
     
     static String name;
     static int choice;
     static Scanner scan = new Scanner(System.in);
 
-    public static void start() throws Exception {
+    public static void start() throws InterruptedException {
             CreateChar();
     }
 
 
-    public static void CreateChar() throws Exception {
-        System.out.println("\nHello! My name is Professor Oak.");
+    public static void CreateChar() throws InterruptedException {
+        System.out.println("\nProfessor Oak: Hello! My name is Professor Oak.");
         System.out.println("I am in charge of this lab.");
     do {
         System.out.println("What is your name?");
@@ -29,7 +30,7 @@ public class game {
             choice = scan.nextInt();
         
                 if(choice == 1) {
-                    System.out.println("\nwelcome to my lab, " + name);
+                    System.out.println("\nProfessor Oak: welcome to my lab, " + name);
                     gameStuff.player.name = name;
                 }
                 else if(choice != 1 || choice != 2) {
@@ -43,15 +44,15 @@ public class game {
         pickPokemon();
     }
 
-    public static void pickPokemon() throws Exception {
+    public static void pickPokemon() throws InterruptedException {
 
         String position;
 
         System.out.println("Follow me. Let get you a pokemon.");
-        usefulMethod.loading("Walking . . . . \n", 100);
+        usefulMethod.loading("Walking . . . . \n", 150);
         usefulMethod.clearScreen();
 
-        System.out.println("\nHere is 3 pokemon balls. Inside every ball there is an unique pokemon.");
+        System.out.println("\nProfessor Oak: Here is 3 pokemon balls. Inside every ball there is an unique pokemon.");
         System.out.println("Pick a ball");
 
      do{
@@ -69,16 +70,19 @@ public class game {
 
                 if(choice == 1) {
                     System.out.println("\nThis Charmander is yours!");
-                    gameStuff.player.pokemon = gameStuff.pet.charmander;
-                    gameStuff.player.nature = gameStuff.pet.cNature;
-                    gameStuff.player.level = gameStuff.pet.cLevel;
-                    gameStuff.player.hp = gameStuff.pet.cHP;
-                    gameStuff.player.attack = gameStuff.pet.cAttack;
-                    gameStuff.player.defense = gameStuff.pet.cDefense;
-                    gameStuff.jerry.pokemon = gameStuff.pet.squirtle;
+                    gameStuff.player.pokemon = gameStuff.pet.charmander; // Pokemon name and skills name 
+                    gameStuff.player.move = gameStuff.pet.cMove; // Moves damage in array
+                    gameStuff.player.nature = gameStuff.pet.cNature; // The nature
+                    gameStuff.player.level = gameStuff.pet.cLevel; // Starting lvl
+                    gameStuff.player.hp = gameStuff.pet.HP; // Starting hp
+                    gameStuff.player.attack = gameStuff.pet.cAttack; // Starting attack
+                    gameStuff.player.defense = gameStuff.pet.cDefense; // Starting defense
+
+                    gameStuff.jerry.pokemon = gameStuff.pet.squirtle; // This part is for Jerry
+                    gameStuff.jerry.move = gameStuff.pet.sMove;
                     gameStuff.jerry.nature = gameStuff.pet.sNature;
                     gameStuff.jerry.level = gameStuff.pet.sLevel;
-                    gameStuff.jerry.hp = gameStuff.pet.sHP;
+                    gameStuff.jerry.hp = gameStuff.pet.HP;
                     gameStuff.jerry.attack = gameStuff.pet.sAttack;
                     gameStuff.jerry.defense = gameStuff.pet.sDefense;
                 }
@@ -98,11 +102,20 @@ public class game {
                 if(choice == 1) {
                     System.out.println("\nThis Squirtle is yours!");
                     gameStuff.player.pokemon = gameStuff.pet.squirtle;
+                    gameStuff.player.move = gameStuff.pet.sMove;
                     gameStuff.player.nature = gameStuff.pet.sNature;
                     gameStuff.player.level = gameStuff.pet.sLevel;
-                    gameStuff.player.hp = gameStuff.pet.sHP;
+                    gameStuff.player.hp = gameStuff.pet.HP;
                     gameStuff.player.attack = gameStuff.pet.sAttack;
                     gameStuff.player.defense = gameStuff.pet.sDefense;
+
+                    gameStuff.jerry.pokemon = gameStuff.pet.bulbasaur;
+                    gameStuff.jerry.move = gameStuff.pet.bMove;
+                    gameStuff.jerry.nature = gameStuff.pet.bNature;
+                    gameStuff.jerry.level = gameStuff.pet.bLevel;
+                    gameStuff.jerry.hp = gameStuff.pet.HP;
+                    gameStuff.jerry.attack = gameStuff.pet.bAttack;
+                    gameStuff.jerry.defense = gameStuff.pet.bDefense;
                 }
                 else {
                     System.out.println();
@@ -120,30 +133,62 @@ public class game {
                 if(choice == 1) {
                     System.out.println("\nThis Bulbasaur is yours!");
                     gameStuff.player.pokemon = gameStuff.pet.bulbasaur;
+                    gameStuff.player.move = gameStuff.pet.bMove;
                     gameStuff.player.nature = gameStuff.pet.bNature;
                     gameStuff.player.level = gameStuff.pet.bLevel;
-                    gameStuff.player.hp = gameStuff.pet.bHP;
+                    gameStuff.player.hp = gameStuff.pet.HP;
                     gameStuff.player.attack = gameStuff.pet.bAttack;
                     gameStuff.player.defense = gameStuff.pet.bDefense;
+
+                    gameStuff.jerry.pokemon = gameStuff.pet.charmander;
+                    gameStuff.jerry.move = gameStuff.pet.cMove;
+                    gameStuff.jerry.nature = gameStuff.pet.cNature;
+                    gameStuff.jerry.level = gameStuff.pet.cLevel;
+                    gameStuff.jerry.hp = gameStuff.pet.HP;
+                    gameStuff.jerry.attack = gameStuff.pet.cAttack;
+                    gameStuff.jerry.defense = gameStuff.pet.cDefense;
                 }
                 else {
                     System.out.println();
                 }
             }
         } while (choice == 2);
-
-        firstBattle();
-    }
-
-    public static void firstBattle() throws Exception {
+        
         Thread.sleep(2000);
         usefulMethod.clearScreen();
         System.out.println("\nAs you leave the lab");
-        usefulMethod.loading(". . . . .", 10);
+        usefulMethod.loading(". . . . .", 150);
+        maps.addingMaps();
+        battle.starterBattle();
 
-        System.out.println("\nAnnoying teen: Hey kid, I see that you got your "+gameStuff.player.pokemon + ". Let's fight (You cannot reject this)");
-        Battle.lvlCheck();
+        maps.preAdventure();
+        
+    }
 
+    public static void credit() throws InterruptedException {
+        System.out.println(" █████╗  ██████╗  ███████╗██████╗  ██╗████████╗");
+        System.out.println("██╔══██╗ ██╔══██╗ ██╔════╝██╔══██╗ ██║╚══██╔══╝");
+        System.out.println("██║  ╚═╝ ██████╔╝ █████╗  ██║  ██║ ██║   ██║");
+        System.out.println("██║  ██╗ ██╔══██╗ ██╔══╝  ██║  ██║ ██║   ██║");
+        System.out.println("╚█████╔╝ ██║  ██║ ███████╗██████╔╝ ██║   ██║");
+        System.out.println(" ╚════╝  ╚═╝  ╚═╝ ╚══════╝╚═════╝  ╚═╝   ╚═╝");
+
+        usefulMethod.loading("Group member's name: Qi Da Chen, Shaughn Bulgar, Simeon Karakatsiotis, Wai Pong.\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Game dialogue created by Simeon Karakatsiotis.\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Pokemon and skill are created by Wai Pong.\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Battle system created by Qi Da Chen, Simeon Karakatsiotis, and Shaughn Bulgar.\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Map created by Wai Pong, Qi Da Chen, and Shaughn Bulgar\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Data structure used in the game: Recursion (battle system) and linked list (maps)\n\n", 50);
+        Thread.sleep(50);
+        usefulMethod.loading("Function that are used in the game: Slow printing, console clearing, experience check, etc\n\n", 50);
+        Thread.sleep(1000);
+
+        pokemon.thankYou();
     }
 
 }

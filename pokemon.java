@@ -1,12 +1,11 @@
-
 import java.util.Scanner;
 
 public class pokemon {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws InterruptedException {
         
         int choice;
         Scanner scan = new Scanner(System.in);
-    
+
         System.out.println("██████╗  ██████╗ ██╗  ██╗███████╗███╗   ███╗ ██████╗ ███╗   ██╗");
         System.out.println("██╔══██╗██╔═══██╗██║ ██╔╝██╔════╝████╗ ████║██╔═══██╗████╗  ██║");
         System.out.println("██████╔╝██║   ██║█████╔╝ █████╗  ██╔████╔██║██║   ██║██╔██╗ ██║");
@@ -25,8 +24,15 @@ public class pokemon {
             game.start();
         }
         else if(choice == 2) {
-            usefulMethod.loading("\nGoodbye . .", 200);
+            usefulMethod.loading("\nGoodbye . .", 150);
         }
         scan.close();
+    }
+
+    public static void thankYou() throws InterruptedException {
+        usefulMethod.clearScreen();
+        System.out.println("Thank you for playing this game!");
+        Thread.sleep(1000);
+        System.exit(0);
     }
 }
