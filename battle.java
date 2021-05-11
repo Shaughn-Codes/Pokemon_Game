@@ -1,13 +1,14 @@
 import java.util.Scanner;
 
 public class battle {
-    
+    /*This Class handles all battle related tasks and events that are associated with battles, examples include
+    Dialouge, the battle system itself, win lose conditions, and even dialoge associated with it.*/
     static int choice;
     static Scanner scan = new Scanner(System.in);
    
 
     public static void starterBattle() throws InterruptedException{
-
+        /*The first battle text is shown here where jerry bloke challenges you in the lab of Professor Oak*/
         System.out.println("\nAnnoying teen: Hey kid, I see that you got your " 
                           + gameStuff.player.pokemon[0] + ". Let's fight (You cannot reject this)");
         Thread.sleep(2000);
@@ -22,7 +23,7 @@ public class battle {
     }
         
     public static void battle1() throws InterruptedException  {
-
+        /*The true first battle once you have trained your first pokemon and expirence the vast open world! oh and jerry bloke is here to say hello.*/
         System.out.println("Pokemon Trainer Jerry: Hey kid! Let's fight again");
         System.out.println("(Yep, you can't rejcect this again");
 
@@ -39,7 +40,7 @@ public class battle {
     }
 
     public static void battle2() throws InterruptedException {
-
+        /**Jerry Blokes third attempt at defeating you, lets see how this plays out.*/
         System.out.println("Trainer Jerry: You have walked in front of my path, so you wanna fight.");
         System.out.println("(You know the rules already)");
 
@@ -56,7 +57,7 @@ public class battle {
     }
 
     public static void battle3() throws InterruptedException {
-
+        /** Jerry bloakes final attempt in the battle of pokemon trainers! */
         System.out.println("Trainer Jerry: We have meet again, blah blah blah.");
         System.out.println("(I know. But I promise this is the last one");
 
@@ -86,7 +87,7 @@ public class battle {
     
     //--------------------PVP battle---------------------
     public static void battleSystemPVP(int trainerHP, int jerryHP) throws InterruptedException {
-        
+        /**Here we have battles with jerry bloke and how they are structured. This loops recersively and allows for certain situations to happen based on hp values */
         int damage;
         
         if(trainerHP <= 1 && jerryHP <= 1) {
@@ -201,7 +202,7 @@ public class battle {
 
     //--------------Wild battle--------------------------
     public static void battleWild(int trainerHP, int wildHp) throws InterruptedException {
-        
+        /** Here we have wild pokemon battles that only happen when grinding up pokemon in general. Also allowing for conditions in case player or wild pokemon dies. */
         int damage;
         
         if(trainerHP <= 1 && wildHp <= 1) {

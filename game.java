@@ -12,6 +12,7 @@ public class game {
 
 
     public static void CreateChar() throws InterruptedException {
+        /**A simple create your character scree. basically naming yourself and creating the initial trainer that represents the player. */
         System.out.println("\nProfessor Oak: Hello! My name is Professor Oak.");
         System.out.println("I am in charge of this lab.");
     do {
@@ -45,7 +46,9 @@ public class game {
     }
 
     public static void pickPokemon() throws InterruptedException {
-
+        /** In this pick pokemon method, here is where various values are assigned to the trainer classes. All is done mostly in the traditional style of pokemon in the terms that the 
+         * rivals choice mirrors the type advantage to your own pokemon.
+         */
         String position;
 
         System.out.println("Follow me. Let get you a pokemon.");

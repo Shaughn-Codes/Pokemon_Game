@@ -1,5 +1,7 @@
 public class PokemonPet {
-        
+        /** Here are the various stats that all pokemon could posses, base stats,name, initial level, moves, etc etc.
+         * This also includes the unique pokemon of the wild pokemon rattata.
+         */
         int HP = 200;
 
         String charmander[] = { "Charmander", "Scratch", "Ember", "Slash", "Flamethrower" };
