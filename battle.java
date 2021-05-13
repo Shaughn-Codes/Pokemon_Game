@@ -67,10 +67,10 @@ public class battle {
         System.out.println("Trainer Jerry Bloke sent out " + gameStuff.jerry.pokemon[1] + "." );
         System.out.println("Go "+ gameStuff.player.pokemon[0] +"!");
 
-        gameStuff.jerry.hp = gameStuff.pet.HP + (15 * 10);
+        gameStuff.jerry.hp = gameStuff.pet.HP + (15 * 5);
         gameStuff.jerry.attack = gameStuff.jerry.attack + (15 * 5);
         gameStuff.jerry.defense = gameStuff.jerry.defense + (15 * 5);
-        gameStuff.player.hp = 2;
+        gameStuff.player.hp = 200;
         battleSystemPVP(gameStuff.player.hp, gameStuff.jerry.hp);
 
         System.out.println("Trainer Jerry: I was hungry....");

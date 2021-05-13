@@ -54,18 +54,18 @@ public class usefulMethod {
             gameStuff.player.hp = gameStuff.player.hp + 10;
             gameStuff.player.attack = gameStuff.player.attack + 5;
             gameStuff.player.defense = gameStuff.player.defense + 5;
-            if(gameStuff.player.level >= 10 && gameStuff.player.wincCount == 1) {
+            if(gameStuff.player.level == 10) {
                 battle.battle1();
-                // having a level 10 or higher exp and 1 win will call battle 1
+                // having a level 10 or higher exp will call battle 1
             }
 
-            if(gameStuff.player.level >= 15 && gameStuff.player.wincCount == 2) {
+            if(gameStuff.player.level == 15) {
                 battle.battle2();
-                // having a level 15 or higher exp and 2 wins will call battle 2
+                // having a level 15 or higher exp will call battle 2
             }
-            if(gameStuff.player.level >= 20 && gameStuff.player.wincCount == 3) {
+            if(gameStuff.player.level == 20) {
                 battle.battle3();
-                // having a level 20 or higher exp and 3 wins will call the final battle
+                // having a level 20 or higher exp calls battle 3
             }
             return;
         }

@@ -30,6 +30,6 @@ public class PokemonPet {
         int rMove[] = { 30, 30, 60, 40 };
         int rLevel = 5;
         int rAttack = 56;
-        int rDefense = 35;
+        int rDefense = 75;
 
 }
