@@ -1,3 +1,3 @@
 # Pokemon_Game
 
-Here is our Attempt
+Run it from the Pokemon.java file. (main method)
